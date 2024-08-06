@@ -46,10 +46,15 @@ Here are some critical concepts elucidated in the paper:
 
 - **Gates**: LSTMs employ gates to control the flow of information, as depicted in the equations:
   - Forget Gate: <img src="https://latex.codecogs.com/svg.latex?f_t%20=%20\sigma(W_f%20\cdot%20[h_{t-1},%20x_t]%20+%20b_f)" title="Forget Gate Equation"/>
+  
   - Input Gate: <img src="https://latex.codecogs.com/svg.latex?i_t%20=%20\sigma(W_i%20\cdot%20[h_{t-1},%20x_t]%20+%20b_i)" title="Input Gate Equation"/>
+  
   - Output Gate: <img src="https://latex.codecogs.com/svg.latex?o_t%20=%20\sigma(W_o%20\cdot%20[h_{t-1},%20x_t]%20+%20b_o)" title="Output Gate Equation"/>
+  
   - Candidate Values: <img src="https://latex.codecogs.com/svg.latex?\tilde{C}_t%20=%20\tanh(W_C%20\cdot%20[h_{t-1},%20x_t]%20+%20b_C)" title="Candidate Values Equation"/>
+  
   - New Cell State: <img src="https://latex.codecogs.com/svg.latex?C_t%20=%20f_t%20*%20C_{t-1}%20+%20i_t%20*%20\tilde{C}_t" title="New Cell State Equation"/>
+  
   - Hidden State: <img src="https://latex.codecogs.com/svg.latex?h_t%20=%20o_t%20*%20\tanh(C_t)" title="Hidden State Equation"/>
 
 
