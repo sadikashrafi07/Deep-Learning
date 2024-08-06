@@ -45,12 +45,13 @@ Here are some critical concepts elucidated in the paper:
 - **Hidden State (h<sub>t</sub>)**: Represents the output of the LSTM cell for each time step and acts as the short-term memory.
 
 - **Gates**: LSTMs employ gates to control the flow of information, as depicted in the equations:
-  - Forget Gate: \( f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \)
-  - Input Gate: \( i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \)
-  - Output Gate: \( o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \)
-  - Candidate Values: \( \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \)
-  - New Cell State: \( C_t = f_t * C_{t-1} + i_t * \tilde{C}_t \)
-  - Hidden State: \( h_t = o_t * \tanh(C_t) \)
+  - Forget Gate: <img src="https://latex.codecogs.com/svg.latex?f_t%20=%20\sigma(W_f%20\cdot%20[h_{t-1},%20x_t]%20+%20b_f)" title="Forget Gate Equation"/>
+  - Input Gate: <img src="https://latex.codecogs.com/svg.latex?i_t%20=%20\sigma(W_i%20\cdot%20[h_{t-1},%20x_t]%20+%20b_i)" title="Input Gate Equation"/>
+  - Output Gate: <img src="https://latex.codecogs.com/svg.latex?o_t%20=%20\sigma(W_o%20\cdot%20[h_{t-1},%20x_t]%20+%20b_o)" title="Output Gate Equation"/>
+  - Candidate Values: <img src="https://latex.codecogs.com/svg.latex?\tilde{C}_t%20=%20\tanh(W_C%20\cdot%20[h_{t-1},%20x_t]%20+%20b_C)" title="Candidate Values Equation"/>
+  - New Cell State: <img src="https://latex.codecogs.com/svg.latex?C_t%20=%20f_t%20*%20C_{t-1}%20+%20i_t%20*%20\tilde{C}_t" title="New Cell State Equation"/>
+  - Hidden State: <img src="https://latex.codecogs.com/svg.latex?h_t%20=%20o_t%20*%20\tanh(C_t)" title="Hidden State Equation"/>
+
 
 ## Applications
 
